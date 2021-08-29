@@ -1,9 +1,9 @@
 const addElement = () => {
     const numberDataEntry = document.getElementsByClassName('data-entry').length + 1;
     const dataEntry = `<div id="data-${numberDataEntry}" class='data-entry'>
-                            <input id="activity-${numberDataEntry}" type='text'>
-                            <input id="dependence-${numberDataEntry}" type='text'>
-                            <input id="time-${numberDataEntry}" type='number'>
+                            <div><input class="form-control space-input"  placeholder="Actividad" id="activity-${numberDataEntry}" type='text'></div>
+                            <div><input class="form-control space-input" placeholder="Dependencia" id="dependence-${numberDataEntry}" type='text'></div>
+                            <div><input class="form-control space-input" placeholder="Tiempo" id="time-${numberDataEntry}" type='number'></div>
                        </div>`
     let principalData = document.getElementById('principal-data');
     principalData.insertAdjacentHTML("beforeend", dataEntry);

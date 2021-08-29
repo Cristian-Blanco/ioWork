@@ -6,15 +6,15 @@ export default class PrintResult {
 
     printTable(){
         const title = `<tr>
-                        <th>Actividad</th>
-                        <th>Predecesora(s)</th>
-                        <th>Duración</th>
-                        <th>Tiempo Inicial Cercano</th>
-                        <th>Tiempo Final Cercano</th>
-                        <th>Tiempo inicial Lejano</th>
-                        <th>Tiempo Final Lejano</th>
-                        <th>Holgura</th>
-                    </tr>`
+                            <th>Actividad</th>
+                            <th>Predecesora(s)</th>
+                            <th>Duración</th>
+                            <th>Tiempo Inicial Cercano</th>
+                            <th>Tiempo Final Cercano</th>
+                            <th>Tiempo inicial Lejano</th>
+                            <th>Tiempo Final Lejano</th>
+                            <th>Holgura</th>
+                        </tr>`
         let content = ``;
         this.table.process.forEach(element => {
             content = content + ` 
@@ -26,11 +26,11 @@ export default class PrintResult {
                     <td>${element.tfc}</td>
                     <td>${element.til}</td>
                     ${this.table.lastLetters.find(letter => letter == element.activity) ? 
-                        `<td class="tfl-max">${element.tfl}</td>` :
+                        `<td class="table-primary">${element.tfl}</td>` :
                         `<td>${element.tfl}</td>`
                     }
                     ${element.slack == 0 ?
-                        `<td class="slack-0">${element.slack}</td>` :
+                        `<td class="table-warning">${element.slack}</td>` :
                         `<td>${element.slack}</td>`
                     }
                     
@@ -38,7 +38,7 @@ export default class PrintResult {
             `;
         });
 
-        return `<table>
+        return `<table class="table table-dark table-hover align-content-table">
                     ${title}
                     ${content}
                 </table>`
@@ -49,11 +49,11 @@ export default class PrintResult {
         const trueOrderRouteCritical = this.table.listRouteCritical.map(element => element.reverse())
         trueOrderRouteCritical.forEach(element => {
             htmlList = htmlList + `
-                <li>${element.join(" - ")}</li>
+                <li class="fs-4 color-text-list">${element.join(" - ")}</li>
             `
         })
         return `
-                <p>Rutas Criticas</p>
+                <p class="fs-3 color-title-list">Rutas Criticas</p>
                 <ul>
                     ${htmlList}
                 </ul>`

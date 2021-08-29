@@ -4,28 +4,50 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/styles.css">
     <title>Document</title>
 </head>
 <body>
-    <form class="container-get-data">
-        <div class="title-container">
-            <h3>Actividad</h3>
-            <h3>Dependencia</h3>
-            <h3>Duracion t(i-j)</h3>
-        </div>
-        <div id="principal-data">
-            <div id="data-1" class="data-entry">
-                <input id="activity-1" type="text">
-                <input id="dependence-1" type="text">
-                <input id="time-1" type="number">
-            </div>
-        </div>
-        <div class="add-remove-data">
-            <button id="plus" type="button">+</button>
-            <button id="minus" type="button">-</button>
-        </div>
-        <button id="resolve" type="button">Resolver</button>
-    </form>
+     <div id="form-data-input">
+          <div class="form-data">
+               <form class="container-get-data">
+                   <div id="principal-data">
+                       <div id="data-1" class="data-entry">
+                              <div class="first-info">
+                                   <div>
+                                        <p class="fs-3">Actividad</p>
+                                        <input class="form-control space-input" placeholder="Actividad" id="activity-1" type="text">
+                                   </div>
+                                   <div>
+                                        <p class="fs-3">Dependencia</p>
+                                        <input class="form-control space-input" placeholder="Dependencia" id="dependence-1" type="text">
+                                   </div>
+                                   <div>
+                                        <p class="fs-3">Duracion t(i-j)</p>
+                                        <input class="form-control space-input" placeholder="Tiempo" id="time-1" type="number">
+                                   </div>
+                              </div>
+                       </div>
+                   </div>
+                   <div>
+                  </div>
+                   <div  class="btn-group buttons-align" role="group" aria-label="Basic outlined example">
+                       <button class="btn btn-primary" id="plus" type="button">Agregar</button>
+                       <button class="btn btn-danger" id="minus" type="button">Restar</button>
+                       <button class="btn btn-success" id="resolve" type="button">Resolver</button>
+                   </div>
+               </form>
+          </div>
+     </div>
+    
+     <div id="result-critical-route" hidden>
+          <div class="content-center-table">
+               <div id="table-info"></div>
+               <div id="critical-route"></div>
+               <button class="btn btn-secondary" type="button" id="back">Volver</button>
+          </div>
+     </div>
 
     <script type="module" src="js/main.js"></script>
 </body>
