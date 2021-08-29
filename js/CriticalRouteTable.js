@@ -20,8 +20,8 @@ const getData = () => {
     return table;
 } 
 
-const maxActivitiesTFC = (tableSelect) => Math.max.apply(Math, tableSelect.map(function(activity) { return activity.tfc; }))
-const minActivitiesTIL = (tableSelect) => Math.min.apply(Math, tableSelect.map(function(activity) { return activity.til; }))
+const maxActivitiesTFC = (tableSelect) => Math.max.apply(Math, tableSelect.map(function(activity) { return activity ? activity.tfc : 0 }))
+const minActivitiesTIL = (tableSelect) => Math.min.apply(Math, tableSelect.map(function(activity) { return activity ? activity.til : 0 }))
 
 const nearTime = (table) => {
     return table.map(function (element) {

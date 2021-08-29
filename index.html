@@ -17,15 +17,15 @@
                               <div class="first-info">
                                    <div>
                                         <p class="fs-3">Actividad</p>
-                                        <input class="form-control space-input" placeholder="Actividad" id="activity-1" type="text">
+                                        <input class="form-control space-input" placeholder="Actividad" id="activity-1" type="text" required>
                                    </div>
                                    <div>
                                         <p class="fs-3">Dependencia</p>
-                                        <input class="form-control space-input" placeholder="Dependencia" id="dependence-1" type="text">
+                                        <input class="form-control space-input" placeholder="Dependencia" id="dependence-1" type="text" required>
                                    </div>
                                    <div>
                                         <p class="fs-3">Duracion t(i-j)</p>
-                                        <input class="form-control space-input" placeholder="Tiempo" id="time-1" type="number">
+                                        <input class="form-control space-input" placeholder="Tiempo" id="time-1" type="number" required>
                                    </div>
                               </div>
                        </div>
@@ -34,7 +34,8 @@
                   </div>
                    <div  class="btn-group buttons-align" role="group" aria-label="Basic outlined example">
                        <button class="btn btn-primary" id="plus" type="button">Agregar</button>
-                       <button class="btn btn-danger" id="minus" type="button">Restar</button>
+                       <button class="btn btn-warning" id="minus" type="button">Quitar</button>
+                       <button class="btn btn-danger" id="restart" type="button">Reiniciar</button>
                        <button class="btn btn-success" id="resolve" type="button">Resolver</button>
                    </div>
                </form>
