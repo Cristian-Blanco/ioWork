@@ -1,5 +1,6 @@
 const emptyInput = () => {
     const numberDataEntry = document.getElementsByClassName('data-entry').length;
+    console.log()
     let pass = true;
     for (let index = 0; index < numberDataEntry; index++) {
         let activity = document.getElementById(`activity-${index+1}`);
@@ -22,8 +23,7 @@ const emptyInput = () => {
             dependence.classList.remove('error-input')
             time.classList.remove('error-input')
         }
-        pass == false && alert('No deje espacios en blanco');
-        break;
+        if(pass == false) {alert('No deje espacios en blanco'); break;}
     }
     return pass;
 }
