@@ -1,6 +1,7 @@
 var listRouteCritical = [];
 
 const getData = () => {
+    listRouteCritical = []
     const numberDataEntry = document.getElementsByClassName('data-entry').length;
     let table = [];
     for (let index = 0; index < numberDataEntry; index++) {
